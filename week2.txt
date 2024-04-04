@@ -1,0 +1,317 @@
+user@Gopikrishna:~$ cal
+     March 2024       
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+31                    
+user@Gopikrishna:~$ cat >file1.txt
+welcome to ubunu
+linux and unix commands
+rgukt is one of the worst university
+user@Gopikrishna:~$ ls
+a.out       C        close_pair.c  Documents  file1.txt  java2    Music  Pictures  quick.c  Templates
+baalu2.pdf  close.c  Desktop       Downloads  java       merge.c  pdfs   Public    snap     Videos
+user@Gopikrishna:~$ file1.txt
+file1.txt: command not found
+user@Gopikrishna:~$ cat file1.txt
+welcome to ubunu
+linux and unix commands
+rgukt is one of the worst university
+user@Gopikrishna:~$ cat >file1.txt
+hi frnds
+bye frnds
+user@Gopikrishna:~$ grep "welcome" file1.txt
+user@Gopikrishna:~$ grep "hi" file1.txt
+hi frnds
+user@Gopikrishna:~$ grep "s" file1.txt
+hi frnds
+bye frnds
+user@Gopikrishna:~$ grep -n "s" file1.txt
+1:hi frnds
+2:bye frnds
+user@Gopikrishna:~$ grep -h "s" file1.txt
+hi frnds
+bye frnds
+user@Gopikrishna:~$ grep -n "s" file1.txt
+1:hi frnds
+2:bye frnds
+user@Gopikrishna:~$ cat >file1.txt
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+user@Gopikrishna:~$ cat file1.txt
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+
+user@gopikrishna:~$ cat file1.txt
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+
+user@Gopikrishna:~$ cat file1.txt
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+user@Gopikrishna:~$ cat >month.txt
+february
+may
+june
+august
+december
+november
+user@Gopikrishna:~$ sort month.txt
+august
+december
+february
+june
+may
+november
+user@Gopikrishna:~$ sort -M month.txt
+february
+may
+june
+august
+november
+december
+user@Gopikrishna:~$ cat >number.txt
+23
+34
+11
+45
+9
+98
+45678
+345
+67
+user@Gopikrishna:~$ sort number.txt
+11
+23
+34
+345
+45
+45678
+67
+9
+98
+user@Gopikrishna:~$ sort -n number.txt
+9
+11
+23
+34
+45
+67
+98
+345
+45678
+user@Gopikrishna:~$ sort -u number.txt
+11
+23
+34
+345
+45
+45678
+67
+9
+98
+user@Gopikrishna:~$ cat number.txt
+23
+34
+11
+45
+9
+9
+98
+98
+45678
+345
+67
+user@gopikrishna:~$ sort -u number.txt
+11
+23
+34
+345
+45
+45678
+67
+9
+98
+user@gopikrishna:~$ cat >sedfile.txt
+user@gopikrishna:~$ cat >sedfile.txt
+    
+IN
+Sign in
+Home
+Shorts
+Subscriptions
+You
+History
+Sign in to like videos, comment, and subscribe.
+Sign in
+Explore
+Trending
+Shopping
+Music
+Movies
+Live
+Gaming
+News
+Sports
+Courses
+Fashion & Beauty
+Podcasts
+Browse channels
+More from YouTube
+YouTube Premium
+YouTube Music
+YouTube Kids
+Settings
+Report history
+Help
+Send feedback
+AboutPressCopyrightContact usCreatorsAdvertiseDevelopers
+TermsPrivacyPolicy & SafetyHow YouTube worksTest new features
+© 2024 Google LLC
+Connect to the internet
+You're offline. Check your connection.
+            
+user@gopikrishna:~$ sed 's/offline/' sedfile.txt
+sed: -e expression #1, char 10: unterminated `s' command
+user@gopikrishna:~$ sed 's/offline/OFFLINE' sedfile.txt
+sed: -e expression #1, char 17: unterminated `s' command
+user@gopikrishna:~$ sed 's/offline./OFFLINE.' sedfile.txt
+sed: -e expression #1, char 19: unterminated `s' command
+user@gopikrishna:~$ sed '/offline/d' sedfile.txt
+
+IN
+Sign in
+Home
+Shorts
+Subscriptions
+You
+History
+Sign in to like videos, comment, and subscribe.
+Sign in
+Explore
+Trending
+Shopping
+Music
+Movies
+Live
+Gaming
+News
+Sports
+Courses
+Fashion & Beauty
+Podcasts
+Browse channels
+More from YouTube
+YouTube Premium
+YouTube Music
+YouTube Kids
+Settings
+Report history
+Help
+Send feedback
+AboutPressCopyrightContact usCreatorsAdvertiseDevelopers
+TermsPrivacyPolicy & SafetyHow YouTube worksTest new features
+© 2024 Google LLC
+Connect to the internet
+
+user@gopikrishna:~$ sed '/offline./OFFLINE.' sedfile.txt
+sed: -e expression #1, char 11: unknown command: `O'
+user@gopikrishna:~$ sed '/one/d' file1.txt
+wellcome to ubuntu
+linux and unix are commands
+this is unix
+user@gopikrishna:~$ sed 's/unix/UNIX' file1.txt
+sed: -e expression #1, char 11: unterminated `s' command
+user@gopikrishna:~$ sed 's/unix/UNIX/' file1.txt
+wellcome to ubuntu
+linux and UNIX are commands
+rgukt is one of the greatest university
+this is UNIX
+user@gopikrishna:~$ sed '/offline./OFFLINE./' sedfile.txt
+sed: -e expression #1, char 11: unknown command: `O'
+user@gopikrishna:~$ sed '/offline/OFFLINE/' sedfile.txt
+sed: -e expression #1, char 10: unknown command: `O'
+user@gopikrishna:~$ sed 's/offline./OFFLINE./' sedfile.txt
+
+IN
+Sign in
+Home
+Shorts
+Subscriptions
+You
+History
+Sign in to like videos, comment, and subscribe.
+Sign in
+Explore
+Trending
+Shopping
+Music
+Movies
+Live
+Gaming
+News
+Sports
+Courses
+Fashion & Beauty
+Podcasts
+Browse channels
+More from YouTube
+YouTube Premium
+YouTube Music
+YouTube Kids
+Settings
+Report history
+Help
+Send feedback
+AboutPressCopyrightContact usCreatorsAdvertiseDevelopers
+TermsPrivacyPolicy & SafetyHow YouTube worksTest new features
+© 2024 Google LLC
+Connect to the internet
+You're OFFLINE. Check your connection.
+
+user@gopikrishna:~$ cat >awkfile.txt
+B200462 Anwesh 99
+B201284 Balu 23
+B200954 Yakanna 100
+B200467 Gopikrishna 89
+B200918 Afroz 79
+user@gopikrishna:~$ awk '{print $1,$3}' awkfile.txt
+B200462 99
+B201284 23
+B200954 100
+B200467 89
+B200918 79
+user@gopikrishna:~$ awk '{print $1}' awkfile.txt
+B200462
+B201284
+B200954
+B200467
+B200918
+user@gopikrishna:~$ 
+
+user@gopikrishna:~$ cal
+     March 2024       
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+31                    
+user@gopikrishna:~$ man sort
+user@gopikrishna:~$ man sort
+user@gopikrishna:~$ man ls
+user@gopikrishna:~$ man poweroff
+user@gopikrishna:~$ man sudo
+user@gopikrishna:~$ 
